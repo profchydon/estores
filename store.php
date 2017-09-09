@@ -31,11 +31,11 @@
 
         if ($response == "Changes successful done") {
 
-          echo "Changes successful done";
+          header("Location: view/stores.php");
 
         }elseif ($response == "Oops! Sorry an error occured. Please try again") {
 
-          echo "Oops! Sorry an error occured. Please try again";
+          header("Location: view/stores.php");
 
         }
 

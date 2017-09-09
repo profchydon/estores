@@ -137,10 +137,10 @@ $(document).ready(function() {
 
                           if (data == "Thanks.. Your store was succesfully registered") {
 
-                              $('#add-store').hide();
-                              $('#upload-div').show();
-                              // $('#add-success').show();
-                              // $('#add-success').text(data);
+                              // $('#add-store').hide();
+                              // $('#upload-div').show();
+                              $('#add-success').show();
+                              $('#add-success').text(data);
 
                               console.log(data);
 
@@ -161,53 +161,6 @@ $(document).ready(function() {
 
               });
 
-              $('#edit-store').click(function(event) {
-
-                      event.preventDefault();
-
-                      var that = $('#edit-form'),
-                          url = that.attr('action'),
-                          type = that.attr('method'),
-                          data = {};
-
-                      // loops through the form to get user information for processing
-                      that.find('[name]').each(function(index, value) {
-                          var that = $(this),
-                              name = that.attr('name'),
-                              value = that.val();
-
-                          data[name] = value;
-                      });
-
-                      $.ajax({
-                              url: url,
-                              type: 'POST',
-                              data: data
-                          })
-                          .done(function(data) {
-
-                              if (data == "Changes successful done") {
-
-                                  $('#message').show();
-                                  $('#message').text(data);
-
-                                  console.log(data);
-
-                              } else if (data == "Oops!! There was an error. Please try again") {
-
-                                $('#message').show();
-                                $('#message').text(data);
-                                console.log(data);
-
-                              }
-
-                          })
-
-                      .fail(function() {
-                          console.log(data);
-                      })
-
-                  });
 
               $('#upload').click(function(event) {
 

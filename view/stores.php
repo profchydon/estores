@@ -44,8 +44,8 @@
                               <p class="store-list-phone"> <?=$each_stores['mobile']?></p>
 
                               <div class="store-button col-md-12">
-                                <a href="#edit<?=$each_stores['id']?>" data-toggle="modal" data-target="#edit<?=$each_stores['id']?>" class="edit-a">Edit Store</a></li>
-                                <a href="#delete<?=$each_stores['id']?>" data-toggle="modal" data-target="#delete<?=$each_stores['id']?>" class="delete-a">Delete</a></li>
+                                <a href="#edit<?=$each_stores['id']?>" data-toggle="modal" data-target="#edit<?=$each_stores['id']?>" class="edit-a"><i class="fa fa-pencil-square-o" aria-hidden="true"></i> Edit Store</a></li>
+                                <a href="#delete<?=$each_stores['id']?>" data-toggle="modal" data-target="#delete<?=$each_stores['id']?>" class="delete-a"><i class="fa fa-trash-o" aria-hidden="true"></i> Delete</a></li>
                               </div>
                             </div>
                           </div>

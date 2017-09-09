@@ -188,11 +188,11 @@
 
         if ($query->execute()) {
 
-            echo "Changes successful done";
+            return true;
 
         }else {
 
-            echo "Oops! Sorry an error occured. Please try again";
+            return false;
 
         }
 

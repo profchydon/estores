@@ -25,17 +25,17 @@
                 <form class="" action="../script.php" method="post" class="form-group" id="store-form" enctype="multipart/form-data">
 
                   <div class="input-group">
-                      <span class="input-group-addon" id="basic-addon1">Name  </span>
+                      <span class="input-group-addon" id="basic-addon1"> <i class="fa fa-info" aria-hidden="true"></i> </span>
                       <input type="text" class="form-control" placeholder="Enter store name" name="name" id="name" aria-describedby="basic-addon1">
                   </div>
 
                   <div class="input-group">
-                      <span class="input-group-addon" id="basic-addon1">Address</span>
+                      <span class="input-group-addon" id="basic-addon1"><i class="fa fa-map-marker" aria-hidden="true"></i></span>
                       <input type="text" class="form-control" placeholder="Enter store address" name="address" id="address" aria-describedby="basic-addon1">
                   </div>
 
                   <div class="input-group">
-                      <span class="input-group-addon" id="basic-addon1">Mobile</span>
+                      <span class="input-group-addon" id="basic-addon1"><i class="fa fa-phone" aria-hidden="true"></i></span>
                       <input type="text" class="form-control" placeholder="Enter phone number" name="mobile" id="mobile" aria-describedby="basic-addon1">
                   </div>
 

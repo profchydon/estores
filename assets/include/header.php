@@ -62,10 +62,8 @@
                  <li><a href="home.php">Dashboard</a></li>
                  <li><a href="stores.php">View Stores</a></li>
                  <li><a href="addstore.php">Add Stores</a></li>
-                 <li><a href="">Delete Stores</a></li>
                  <li role="separator" class="divider"></li>
                  <li><a href="../logout.php">Logout</a></li>
-                 <li role="separator" class="divider"></li>
                </ul>
              </li>
           </ul>
