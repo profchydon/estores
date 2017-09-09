@@ -4,7 +4,7 @@
 
     require '../script.php';
 
-    $email = $_SESSION['email'];
+    $email = htmlentities(strip_tags(trim($_SESSION['email'])));
 
     $title = "Stores";
     $header = "List of Stores";
@@ -20,48 +20,43 @@
             <div class="col-md-12">
 
               <div class="store-list-header">
-                  <h4>You have 4 Listed Stores</h4>
+                  <h4>You have <?php echo count($stores)?> Listed Stores</h4>
               </div>
 
               <div class="store-list-details">
 
                   <div class="store-list-details-row row">
 
-                      <div class="col-md-6">
+                      <?php
 
-                        <div class="store-list-details-img col-md-7">
-                            <img src="../assets/img/store1.jpg" alt="" class="store-list-img img-responsive">
-                        </div>
+                        foreach ($stores as $key => $each_stores) { ?>
 
-                        <div class="store-list-details-main col-md-5">
-                          <p class="store-list-name"><b>Eni Stores</b></p>
-                          <p class="store-list-address">23, GRA Road off Obi imo</p>
-                          <p class="store-list-phone"> 070383845768</p>
+                          <div class="col-md-6 store-col6">
 
-                          <div class="store-button col-md-12">
-                            <button type="submit" class="btn btn-primary" name="button">Edit Store</button>
-                            <button type="submit" class="btn btn-primary" name="button">Edit Store</button>
+                            <div class="store-list-details-img col-md-7">
+                                <img src="<?=$each_stores['image']?>" alt="" class="store-list-img img-responsive">
+
+                            </div>
+
+                            <div class="store-list-details-main col-md-5">
+                              <p class="store-list-name"><b><?=$each_stores['name']?></b></p>
+                              <p class="store-list-address"><?=$each_stores['address']?></p>
+                              <p class="store-list-phone"> <?=$each_stores['mobile']?></p>
+
+                              <div class="store-button col-md-12">
+                                <a href="#edit<?=$each_stores['id']?>" data-toggle="modal" data-target="#edit<?=$each_stores['id']?>" class="edit-a">Edit Store</a></li>
+                                <a href="#delete<?=$each_stores['id']?>" data-toggle="modal" data-target="#delete<?=$each_stores['id']?>" class="delete-a">Delete</a></li>
+                              </div>
+                            </div>
                           </div>
-                        </div>
-                      </div>
 
-                      <div class="col-md-6">
 
-                        <div class="store-list-details-img col-md-7">
-                            <img src="../assets/img/store1.jpg" alt="" class="store-list-img img-responsive">
-                        </div>
+                      <?php
+                          include '../assets/include/modal/delete.php';
+                          include '../assets/include/modal/edit.php';
+                        }
 
-                        <div class="store-list-details-main col-md-5">
-                          <p class="store-list-name"><b>Eni Stores</b></p>
-                          <p class="store-list-address">23, GRA Road off Obi imo</p>
-                          <p class="store-list-phone"> 070383845768</p>
-
-                          <div class="store-button col-md-12">
-                            <button type="submit" class="btn btn-primary" name="button">Edit Store</button>
-                            <button type="submit" class="btn btn-primary" name="button">Edit Store</button>
-                          </div>
-                        </div>
-                      </div>
+                       ?>
 
                   </div>
 
@@ -78,5 +73,6 @@
  <?php
 
      include '../assets/include/footer.php';
+
 
   ?>

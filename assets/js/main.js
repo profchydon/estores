@@ -137,8 +137,11 @@ $(document).ready(function() {
 
                           if (data == "Thanks.. Your store was succesfully registered") {
 
-                              $('#add-success').show();
-                              $('#add-success').text(data);
+                              $('#add-store').hide();
+                              $('#upload-div').show();
+                              // $('#add-success').show();
+                              // $('#add-success').text(data);
+
                               console.log(data);
 
                           } else if (data == "Oops!! There was an error. Please try again") {
@@ -156,6 +159,112 @@ $(document).ready(function() {
                       console.log(data);
                   })
 
+              });
+
+              $('#edit-store').click(function(event) {
+
+                      event.preventDefault();
+
+                      var that = $('#edit-form'),
+                          url = that.attr('action'),
+                          type = that.attr('method'),
+                          data = {};
+
+                      // loops through the form to get user information for processing
+                      that.find('[name]').each(function(index, value) {
+                          var that = $(this),
+                              name = that.attr('name'),
+                              value = that.val();
+
+                          data[name] = value;
+                      });
+
+                      $.ajax({
+                              url: url,
+                              type: 'POST',
+                              data: data
+                          })
+                          .done(function(data) {
+
+                              if (data == "Changes successful done") {
+
+                                  $('#message').show();
+                                  $('#message').text(data);
+
+                                  console.log(data);
+
+                              } else if (data == "Oops!! There was an error. Please try again") {
+
+                                $('#message').show();
+                                $('#message').text(data);
+                                console.log(data);
+
+                              }
+
+                          })
+
+                      .fail(function() {
+                          console.log(data);
+                      })
+
+                  });
+
+              $('#upload').click(function(event) {
+
+                      event.preventDefault();
+
+                      var that = $('#upload-form'),
+                          url = that.attr('action'),
+                          type = that.attr('method'),
+                          data = {};
+
+                      // loops through the form to get user information for processing
+                      that.find('[name]').each(function(index, value) {
+                          var that = $(this),
+                              name = that.attr('name'),
+                              value = that.val();
+
+                          data[name] = value;
+                      });
+
+                      $.ajax({
+                              url: url,
+                              type: 'POST',
+                              data: data
+                          })
+                          .done(function(data) {
+
+                              if (data == "Thanks.. Your store was succesfully registered") {
+
+                                  // $('#add-store').hide();
+                                  // $('#upload-div').show();
+                                  $('#add-success').show();
+                                  $('#add-success').text(data);
+
+                                  console.log(data);
+
+                              } else if (data == "Oops!! There was an error. Please try again") {
+
+                                $('#add-success').show();
+                                $('add-success').css("background-color", "red");
+                                $('#add-success').text(data);
+                                console.log(data);
+
+                              }
+
+                          })
+
+                      .fail(function() {
+                          console.log(data);
+                      })
+
+                  });
+
+              $('#upload-store-pix').on("change" , function(e){
+                  var filename = e.target.value.split('\\').pop();
+                  $('#input-label').css('display' , 'none');
+                  $('#label_span').text(filename).css('background-color' , 'transparent');
+                  $('#upload').css('display' , 'block');
               });
 
 });

@@ -4,7 +4,7 @@
 
     require '../script.php';
 
-    $email = $_SESSION['email'];
+    $email = htmlentities(strip_tags(trim($_SESSION['email'])));
 
     $title = "Add Store";
     $header = "Add a Store";
@@ -22,7 +22,7 @@
                 <h4 class="store-entry-holder-h4">Enter Details of your store to register them</h4>
                 <h5 class="store-entry-holder-h5">Make your store visible to millions of customers</h5>
 
-                <form class="" action="../script.php" method="post" class="form-group" id="store-form">
+                <form class="" action="../script.php" method="post" class="form-group" id="store-form" enctype="multipart/form-data">
 
                   <div class="input-group">
                       <span class="input-group-addon" id="basic-addon1">Name  </span>
@@ -39,8 +39,24 @@
                       <input type="text" class="form-control" placeholder="Enter phone number" name="mobile" id="mobile" aria-describedby="basic-addon1">
                   </div>
 
-                  <button type="submit" name="add-store" id="add-store" class="btn btn-success pull-right">Add Store</button>
 
+                  <button type="submit" name="add-store" id="add-store" class="btn btn-success btn-block">Add Store</button>
+
+
+                </form>
+
+                <form class="" action="../script.php" method="post" class="form-group" id="upload-form" enctype="multipart/form-data">
+                  <div class="input-group" id="upload-div">
+
+                    <input type="text" name="name" value="<?=$_SESSION['store_name'];?>">
+
+                    <p class="img-h4">Upload Store image to complete registration</p><br>
+                    <label id="input-label" for="upload-store-pix">Upload Store Image</label>
+                        <span id="label_span"></span>
+                        <input type="file" id="upload-store-pix" name="store-image"> <br>
+                        <!-- <button type="submit" class="btn btn-primary" id="upload" name="upload">Complete Upload</button> -->
+                  </div>
+                    <button type="submit" class="btn btn-success btn-block" id="upload" name="upload">Complete</button>
                 </form>
 
             </div>

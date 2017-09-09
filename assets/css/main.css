@@ -29,9 +29,51 @@ ul.nav.navbar-nav.navbar-right {
     border: 0px !important;
 }
 
+h2.who-we-are.text-center {
+    margin: 0px;
+    font-size: 22px;
+    font-weight: 600;
+}
+
+h5.who-we-are-des {
+    font-size: 19px;
+    line-height: 40px;
+    padding: 20px 70px;
+}
+
+input#upload-store-pix {
+    display: none;
+}
+
+button#upload {
+    display: none;
+}
+
+.col-md-6.store-col6 {
+    margin: 0px 0px 50px 0px;
+}
+
+label#input-label {
+    background: #3db8de;
+    padding: 15px;
+    font-size: 12px;
+    font-weight: 700;
+    color: #fff;
+}
+
+p.img-h4 {
+    font-size: 12px;
+    font-weight: 500;
+}
+
 div#store-holder {
     background: #efefef;
 }
+
+#upload-div {
+    display: none;
+}
+
 
 .navbar-header {
   background: #e0eaeb;
@@ -110,21 +152,73 @@ button.btn.btn-primary.pull-right {
     margin: 50px 5px 0px 5px;
 }
 
+button.delete-action.btn.btn-info.btn-block {
+    font-weight: 600;
+}
+
+a.edit-a {
+    color: #ffffff;
+    background-color: #3db8de;
+    font-size: 12px;
+    border: none;
+    padding: 9px 13px;
+    /*border-radius: 4px;*/
+}
+
+a.delete-a: focus {
+    text-decoration: none;
+    text-decoration-line: none;
+}
+
+h5.modal-delete-h5.text-center {
+    font-size: 14px;
+    line-height: 25px;
+    font-weight: 500;
+}
+
+/*#store-id {
+    display: none;
+}*/
+
+div#edit-modal {
+    padding: 0px 30px 30px 30px;
+}
+
+h4#message {
+    font-size: 14px;
+    background: rgb(210, 58, 43);
+    padding: 5px;
+    color: #fff;
+    margin: 0px;
+    border: none;
+    display: none;
+
+}
+
+a.delete-a {
+    color: #ffffff;
+    background-color: #de4c3d;
+    font-size: 12px;
+    border: none;
+    padding: 9px 20px;
+    /*border-radius: 4px;*/
+}
+
 p.store-list-name {
-    color: #3db8de;
+    color: #060405;
     font-size: 15px;
 }
 
 p.store-list-phone {
     font-size: 14px;
-    color: #3db8de;
-    font-weight: 600;
+    color: #060405;
+    font-weight: 500;
 }
 
 p.store-list-address {
     font-size: 14px;
-    color: #3db8de;
-    font-weight: 600;
+    color: #060405;
+    font-weight: 500;
 }
 
 .navbar-default .navbar-nav>li>a:hover{
@@ -364,9 +458,16 @@ h5#add-success {
 
   h1.home-landing-h1.text-center {
     margin: 20px;
-    font-size: 30px;
+    font-size: 28px;
     color: #fff;
     font-weight: 500;
+  }
+
+  h5.who-we-are-des {
+    font-size: 18px;
+    line-height: 40px;
+    padding: 20px 10px;
+    text-align: justify;
   }
 
   section.store-holder {
