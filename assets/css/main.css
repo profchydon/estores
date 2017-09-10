@@ -39,8 +39,8 @@ h5.who-we-are-des {
     font-size: 19px;
     line-height: 40px;
     padding: 20px 70px;
+    font-weight: 400;
 }
-
 input#upload-store-pix {
     display: none;
 }
@@ -113,21 +113,38 @@ li.home-nav-li {
 }
 
 .modal-header {
-    background-color: #3db8de;
+    background-color: #76828d;
     padding: 15px;
-    border-bottom: 1px solid rgb(229, 229, 229);
+    border-bottom: 1px solid #76828d;
+    color: #fff;
 }
 
 .modal-footer {
-    background-color: #3db8de;
+    background-color: #76828d;
     padding: 20px;
     text-align: right;
-    border-top: 1px solid #e5e5e5;
+    border-top: 1px solid #76828d;
 }
 
 .modal-body {
     position: relative;
     padding: 20px 65px;
+}
+
+button#signup_button {
+    padding: 11px;
+    font-size: 13px;
+    font-weight: 700;
+}
+
+button#sign_in_button {
+  padding: 11px;
+  font-size: 13px;
+  font-weight: 700;
+}
+
+.sign-in-error {
+    margin-bottom: 0px;
 }
 
 a.view-more {
@@ -154,6 +171,7 @@ button.btn.btn-primary.pull-right {
 
 button.delete-action.btn.btn-info.btn-block {
     font-weight: 600;
+    margin-top: 15px;
 }
 
 a.edit-a {
@@ -248,6 +266,11 @@ img.store-list-img.img-responsive {
     max-width: 100%;
     max-height: 162px;
     min-height: 162px;
+    border: 1px solid #adadad;
+}
+
+hr#faq-hr {
+    margin-top: 0px;
 }
 
 .store-list-details-main.col-md-5 {
@@ -263,7 +286,8 @@ img.store-list-img.img-responsive {
 }
 
 .store-list-header h4 {
-    font-weight: 400;
+    font-weight: 500;
+    font-size: 14px;
 }
 
 section.store-list {
@@ -356,7 +380,7 @@ section.store-entry-holder {
 }
 
 .input-group {
-    margin: 30px 0px;
+    margin: 0px 0px 30px;
 }
 
 .btn-success {
@@ -388,6 +412,7 @@ h4.store-entry-holder-h4 {
 
 h5.store-entry-holder-h5 {
     font-weight: 400;
+    margin-bottom: 50px;
 }
 
 

@@ -33,10 +33,12 @@
 
                           <div class="col-md-6 store-col6">
 
-                            <div class="store-list-details-img col-md-7">
+                            <div class="store-list-details-img col-md-5">
                                 <img src="<?=$each_stores['image']?>" alt="" class="store-list-img img-responsive">
 
                             </div>
+
+
 
                             <div class="store-list-details-main col-md-5">
                               <p class="store-list-name"><b><?=$each_stores['name']?></b></p>
@@ -47,6 +49,9 @@
                                 <a href="#edit<?=$each_stores['id']?>" data-toggle="modal" data-target="#edit<?=$each_stores['id']?>" class="edit-a"><i class="fa fa-pencil-square-o" aria-hidden="true"></i> Edit Store</a></li>
                                 <a href="#delete<?=$each_stores['id']?>" data-toggle="modal" data-target="#delete<?=$each_stores['id']?>" class="delete-a"><i class="fa fa-trash-o" aria-hidden="true"></i> Delete</a></li>
                               </div>
+                            </div>
+                            <div class="col-md-2">
+
                             </div>
                           </div>
 

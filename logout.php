@@ -5,6 +5,4 @@
     require 'script.php';
     $user->redirect('index.php');
 
-
-
  ?>

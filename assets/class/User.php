@@ -55,6 +55,9 @@
 
         }
 
+        /**
+         * @return boolean
+         */
         public function emailExist ()
         {
 
@@ -81,8 +84,6 @@
             }
 
         }
-
-
 
         /**
          * @return boolean
@@ -131,6 +132,8 @@
 
 
         /**
+        * @param email
+        * @return String
          *  Fetch user's password from database to be used for password verification
          */
         function passwordFetch($email)
@@ -202,8 +205,6 @@
 
           } catch (Exception $e) {
 
-
-
           }
 
         }
@@ -219,24 +220,6 @@
 
         }
 
-        public function uploadImage ($name, $file_temp, $file_ext) {
-
-          $file_path = "assets/img/store/" . $name . "." . $file_ext;
-          move_uploaded_file($file_temp,$file_path);
-
-          $query = $this->connection->prepare('UPDATE store SET image = :image WHERE name =:name');
-          $query->bindParam(':image' , $file_path);
-          $query->bindParam(':name' , $name);
-          if ($query->execute()) {
-              echo "success";
-          }else {
-              echo "failed";
-          }
-        }
-
-
     }
-
-
 
  ?>

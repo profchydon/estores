@@ -1,10 +1,10 @@
 <?php
 
-
     $store = new Store($Database = new Database);
 
     $stores = $store->getStores();
 
+    // Lets add a store
     if (isset($_POST['add-store'])) {
 
       $response = $store->addStore();
@@ -22,20 +22,23 @@
     }
 
     if (isset($_POST['back'])) {
-      header("Location: view/stores.php");
+
+      $store->redirect('view/stores.php');
+
     }
 
+    // Change Store details
     if (isset($_POST['change'])) {
 
         $response = $store->updateStore();
 
         if ($response == "Changes successful done") {
 
-          header("Location: view/stores.php");
+          $store->redirect('view/stores.php');
 
         }elseif ($response == "Oops! Sorry an error occured. Please try again") {
 
-          header("Location: view/stores.php");
+          $store->redirect('view/stores.php');
 
         }
 
@@ -88,6 +91,5 @@
         }
 
       }
-
 
  ?>

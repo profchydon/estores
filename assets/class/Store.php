@@ -172,6 +172,10 @@
 
       }
 
+      /**
+      *@return Boolean
+      *
+      **/
       public function updateStore () {
 
         $this->name = htmlentities(strip_tags(trim($_POST['name'])));
@@ -195,6 +199,16 @@
             return false;
 
         }
+
+      }
+
+      /**
+       * redirects to desired page
+       */
+      public function redirect($location)
+      {
+
+          header("Location: " . $location);
 
       }
 
