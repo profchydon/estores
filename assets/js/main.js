@@ -137,10 +137,9 @@ $(document).ready(function() {
 
                           if (data == "Thanks.. Your store was succesfully registered") {
 
-                              // $('#add-store').hide();
-                              // $('#upload-div').show();
                               $('#add-success').show();
                               $('#add-success').text(data);
+                              setTimeout("window.location='stores.php'", 3000);
 
                               console.log(data);
 

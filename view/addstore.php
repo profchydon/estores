@@ -40,7 +40,12 @@
                   <p style="font-size:12px;color:red;" class="text-center" ng-show="storeform.mobile.$invalid && storeform.mobile.$touched">Please Enter a Contact Number</p>
                   <div class="input-group">
                       <span class="input-group-addon" id="basic-addon1"><i class="fa fa-phone" aria-hidden="true"></i></span>
-                      <input type="text" class="form-control" placeholder="Enter phone number" name="mobile" id="mobile" aria-describedby="basic-addon1" ng-model="store.mobile" ng-required="true">        
+                      <input type="text" class="form-control" placeholder="Enter phone number" name="mobile" id="mobile" aria-describedby="basic-addon1" ng-model="store.mobile" ng-required="true">
+                  </div>
+
+                  <div class="input-group" id="store-id">
+                      <span class="input-group-addon" id="basic-addon1">Token</span>
+                      <input type="text" class="form-control" placeholder="Enter phone number" name="token" id="id" aria-describedby="basic-addon1" value="<?=$_SESSION['edit_token']?>">
                   </div>
 
 
@@ -76,28 +81,28 @@
 
                 <div class="row">
 
-                    <div class="row">
+                    <div class="faq-row row">
 
                         <h5><b>Q: Question 1</b></h5>
                         <h5>A: Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do  </h5>
 
                     </div>
 
-                    <div class="row">
+                    <div class="faq-row row">
 
                         <h5><b>Q: Question 1</b></h5>
                         <h5>A: Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do  </h5>
 
                     </div>
 
-                    <div class="row">
+                    <div class="faq-row row">
 
                         <h5><b>Q: Question 1</b></h5>
                         <h5>A: Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do  </h5>
 
                     </div>
 
-                    <div class="row">
+                    <div class="faq-row row">
 
                         <h5><b>Q: Question 1</b></h5>
                         <h5>A: Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do  </h5>

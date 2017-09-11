@@ -49,7 +49,7 @@
           <span class="icon-bar"></span>
           <span class="icon-bar"></span>
         </button>
-        <a class="navbar-brand" href="#">E-Stores</a>
+        <a class="navbar-brand" style="color: #01579b;"href="#">E-Stores</a>
       </div>
 
       <!-- Collect the nav links, forms, and other content for toggling -->

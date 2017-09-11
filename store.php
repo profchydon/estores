@@ -4,18 +4,31 @@
 
     $stores = $store->getStores();
 
+
     // Lets add a store
     if (isset($_POST['add-store'])) {
 
-      $response = $store->addStore();
+      session_start();
+      $edit_token = $_SESSION['edit_token'];
+      $token_from_form = htmlentities(strip_tags(trim($_POST['token'])));
 
-      if ($response == "Thanks.. Your store was succesfully registered") {
+      if ($edit_token == $token_from_form) {
 
-        echo "Thanks.. Your store was succesfully registered";
+        $response = $store->addStore();
 
-      }elseif ($response == "Oops! Sorry an error occured. Please try again") {
+        if ($response == "Thanks.. Your store was succesfully registered") {
 
-        echo "Oops! Sorry an error occured. Please try again";
+          echo "Thanks.. Your store was succesfully registered";
+
+        }elseif ($response == "Oops! Sorry an error occured. Please try again") {
+
+          echo "Oops! Sorry an error occured. Please try again";
+
+        }
+
+      }else {
+
+          $store->redirect('view/stores.php');
 
       }
 
@@ -30,15 +43,27 @@
     // Change Store details
     if (isset($_POST['change'])) {
 
-        $response = $store->updateStore();
+        session_start();
+        $edit_token = $_SESSION['edit_token'];
+        $token_from_form = htmlentities(strip_tags(trim($_POST['token'])));
 
-        if ($response == "Changes successful done") {
+        if ($edit_token == $token_from_form) {
 
-          $store->redirect('view/stores.php');
+          $response = $store->updateStore();
 
-        }elseif ($response == "Oops! Sorry an error occured. Please try again") {
+          if ($response == "Changes successful done") {
 
-          $store->redirect('view/stores.php');
+            $store->redirect('view/stores.php');
+
+          }elseif ($response == "Oops! Sorry an error occured. Please try again") {
+
+            $store->redirect('view/stores.php');
+
+          }
+
+        }else {
+
+            $store->redirect('view/stores.php');
 
         }
 
